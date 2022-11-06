@@ -4,7 +4,7 @@
   "description": "<h1>Purpose</h1>\r The purpose of this page is to provide users with detailed knowledge about each usable character in the classic arcade game Street Fighter II Super Turbo.",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon app.js"
   },
   "repository": {
     "type": "git",

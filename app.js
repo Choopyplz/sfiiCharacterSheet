@@ -1,13 +1,7 @@
-//env
-require('dotenv').config();
-
-//express
 const express = require('express');
 const app = express();
-
-
-//mongoose
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 //connecting application with database
 mongoose.connect(process.env.DATABASE_URL, {
@@ -22,6 +16,15 @@ db.once('open', () => console.log('Connected to Database'));
 
 app.use(express.json());
 
+//Import Routes
+const postsRoute = require('./routes/posts');
+
+app.use('/posts', postsRoute);
+
+//Routes
+app.get('/', (req, res) => {
+    res.send('We are on home');
+});
 
 //listening port
 app.listen(3000, () => console.log('Server Started'));
