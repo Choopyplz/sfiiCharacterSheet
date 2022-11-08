@@ -23,9 +23,9 @@ db.once('open', () => console.log('Connected to Database'));
 app.use(express.json());
 
 //Import Routes
-const postsRoute = require('./routes/posts');
+const charsRoute = require('./Routes/chars');
 
-app.use('/posts', postsRoute);
+app.use('/chars', charsRoute);
 
 //Routes
 app.get('/', (req, res) => {

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const PostSchema = mongoose.Schema({
+const CharSchema = mongoose.Schema({
     title: String,
     description: String,
     date: {
@@ -9,4 +9,4 @@ const PostSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Posts', PostSchema);
+module.exports = mongoose.model('Chars', CharSchema);
