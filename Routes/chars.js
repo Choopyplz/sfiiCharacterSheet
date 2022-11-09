@@ -15,8 +15,14 @@ router.get('/', async (req, res) => {
 //Submits char
 router.post('/', async (req, res) => {
     const char = new Char({
-        title: req.body.title,
-        description: req.body.description
+        name: req.body.name,
+        dateOfBirth: req.body.dateOfBirth,
+        height: req.body.height,
+        weight: req.body.weight,
+        bloodType: req.body.bloodType,
+        nationality: req.body.nationality,
+        fightingStyle: req.body.fightingStyle,
+        alignment: req.body.alignment
     });
     try{
         const savedChar = await char.save();
