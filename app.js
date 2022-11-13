@@ -32,8 +32,5 @@ app.get('/', (req, res) => {
     res.send('SFII Characters');
 });
 
-
-
-
 //listening port
 app.listen(3000, () => console.log('Server Started'));

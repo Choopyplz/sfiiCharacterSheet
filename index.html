@@ -1,66 +1,70 @@
 <!DOCTYPE html>
-
+<html lang="en">
     <head>
-        <meta charset=”utf-8″>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Street Fighter II Turbo Character Sheet</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/index.js" type="module" defer></script>
         <img src="../assets/titleScreen.png" alt="titleScreen" class="titleScreen">
     </head>
     <body>
         <header>
-            <img src="../assets/worldMap.png" alt="worldMap" class="worldMap">
+            <img src="../assets/worldMap.png" alt="worldMap" class="worldMap" id="worldMap">
             
             <img src="../assets/pSelect.png" alt="pSelect" class="pSelect">
         </header>
-        <main role="main" class="main">
-            <button class="button" id="ryuP">
+        <div class="display-none" id="charModal"></div>
+
+        <div class="grid">
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
-                <img src="../assets/portraits/ryuPS.png" alt="ryuPS" id="1ryuPS">
-            </button>
-            <button class="button">
+                <img src="../assets/portraits/ryuPS.png" alt="ryuPS">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/hondaPS.png" alt="hondaPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/blankaPS.png" alt="blankaPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/guilePS.png" alt="guilePS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/balrogPS.png" alt="balrogPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/vegaPS.png" alt="vegaPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/kenPS.png" alt="kenPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/chunliPS.png" alt="chunliPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/zangiefPS.png" alt="zangiefPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/dhalsimPS.png" alt="dhalsimPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/sagatPS.png" alt="sagatPS">
-            </button>
-            <button class="button">
+            </div>
+            <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
                 <img src="../assets/portraits/bisonPS.png" alt="bisonPS">
-            </button>
+            </div>
         </main>
     </body>
 
@@ -77,6 +81,5 @@
 
 
 
-
-    <script src="app.js"></script> 
+    
 </html>
