@@ -29,8 +29,11 @@ app.use('/chars', charsRoute);
 
 //Routes
 app.get('/', (req, res) => {
-    res.send('We are on home');
+    res.send('SFII Characters');
 });
+
+
+
 
 //listening port
 app.listen(3000, () => console.log('Server Started'));
