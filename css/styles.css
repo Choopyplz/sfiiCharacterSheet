@@ -45,7 +45,7 @@ header {
     margin-bottom: 20px;
 }
 
-.grid {
+.gallery {
     display: grid;
     max-width: 1020px;
     margin-left: auto;
@@ -72,3 +72,45 @@ header {
 }
 
 /* Modal */
+button {
+    padding: 5px;
+    font-size: 1.3em;
+    background: #f153d1;
+    color: rgb(235, 218, 92);
+    border: none;
+    border-radius: 30%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  #modal-overlay {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #modal-overlay #modal {
+    max-width: 100%;
+    width: 100%;
+    background: rgb(0, 1, 117);
+    height: 500px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  
+  #modal-overlay #modal .modal-footer {
+    position: absolute;
+    margin-top: auto;
+  }

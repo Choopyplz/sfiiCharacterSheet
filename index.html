@@ -10,20 +10,28 @@
     </head>
     <body>
         <header>
+            <div id="modal-overlay">
+                <div id="modal">
+                    <!-- <table class="table table-striped" -->
+                    <div class="modal-footer">
+                        <button id="close-modal">X</button>
+                    </div>
+                </div>
+            </div>
+
             <img src="../assets/worldMap.png" alt="worldMap" class="worldMap" id="worldMap">
             
             <img src="../assets/pSelect.png" alt="pSelect" class="pSelect">
         </header>
-        <div class="display-none" id="charModal"></div>
 
-        <div class="grid">
-            <div class="charIcon">
+        <div class="gallery" id="gallery">
+            <div class="charIcon" id="open-modal">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
-                <img src="../assets/portraits/ryuPS.png" alt="ryuPS">
+                <img src="../assets/portraits/ryuPS.png" alt="ryuPS" id="ryuPS">
             </div>
-            <div class="charIcon">
+            <div class="charIcon" id="hondaData">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
-                <img src="../assets/portraits/hondaPS.png" alt="hondaPS">
+                <img src="../assets/portraits/hondaPS.png" alt="hondaPS" id="hondaPS">
             </div>
             <div class="charIcon">
                 <img class="psHover" src="../assets/psHover.png" alt="psHover">
@@ -66,20 +74,5 @@
                 <img src="../assets/portraits/bisonPS.png" alt="bisonPS">
             </div>
         </main>
-    </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    </body>  
 </html>
