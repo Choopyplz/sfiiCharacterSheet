@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 const CharSchema = mongoose.Schema({
     name: String,
-    dateOfBirth: String,
+    date_of_birth: String,
     height: String,
     weight: String,
-    bloodType: String,
+    blood_type: String,
     nationality: String,
-    fightingStyle: String,
+    fighting_style: String,
     alignment: String
 });
 

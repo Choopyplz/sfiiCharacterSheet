@@ -16,12 +16,12 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const char = new Char({
         name: req.body.name,
-        dateOfBirth: req.body.dateOfBirth,
+        date_of_birth: req.body.date_of_birth,
         height: req.body.height,
         weight: req.body.weight,
-        bloodType: req.body.bloodType,
+        blood_type: req.body.blood_type,
         nationality: req.body.nationality,
-        fightingStyle: req.body.fightingStyle,
+        fighting_style: req.body.fighting_style,
         alignment: req.body.alignment
     });
     try{
