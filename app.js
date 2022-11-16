@@ -33,10 +33,11 @@ app.get('/', (req, res) => {
     res.send('SFII Characters');
 });
 
-app.get('/chars', (req, res) => {
-    database.collection('chars').find({}).toArray((err, result) => {
-        if(err) throw err
-        resp.send(result)
+app.get('/', function(req, res, next) {
+    db.collection('chars', function(err, collection){
+        collection.find({}).toArray(function(err, data) {
+            res.json(data);
+        })
     });
 });
 

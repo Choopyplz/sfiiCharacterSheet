@@ -11,4 +11,4 @@ const CharSchema = mongoose.Schema({
     alignment: String
 });
 
-module.exports = mongoose.model('Chars', CharSchema);
+module.exports = mongoose.model('Char', CharSchema);
