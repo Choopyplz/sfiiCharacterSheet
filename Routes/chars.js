@@ -6,9 +6,9 @@ const Char = require('../models/Char');
 router.get('/', async (req, res) => {
     try{
         const chars = await Char.find();
-        res.send(chars);
+        res.json(chars);
     } catch(err) {
-        res.json({ message: err });
+        res.send({ message: err });
     }
 });
 
@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
 });
 
 //Get back specific char
-router.get('/char/:Id', async (req, res) => {
+router.get('/char/:id', async (req, res) => {
     try{
     const post = await Char.findById(req.params.charId);
     res.json(Char);
@@ -43,7 +43,7 @@ router.get('/char/:Id', async (req, res) => {
 });
 
 //Delete a char
-router.delete('/char/:Id', async (req, res) => {
+router.delete('/char/:id', async (req, res) => {
     try{
     const removedChar = await Char.remove({_id: req.params.charId });
     res.json(removedChar);
@@ -53,7 +53,7 @@ router.delete('/char/:Id', async (req, res) => {
 });
 
 //Update char
-router.patch('/char/:Id', async (req, res) => {
+router.patch('/char/:id', async (req, res) => {
     try{
     const updatedChar = await Char.updateOne(
         { _id: req.params.charId },

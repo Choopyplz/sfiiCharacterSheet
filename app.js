@@ -25,20 +25,14 @@ app.use(express.json());
 //Import Routes
 const charsRoute = require('./Routes/chars');
 const { response } = require('express');
+const Char = require('./models/Char');
 
 app.use('/chars', charsRoute);
 
 //Routes
-app.get('/', (req, res) => {
-    res.send('SFII Characters');
-});
 
-app.get('/', function(req, res, next) {
-    db.collection('chars', function(err, collection){
-        collection.find({}).toArray(function(err, data) {
-            res.json(data);
-        })
-    });
+app.get('/', function (req, res) {
+    res.json();
 });
 
 //listening port
