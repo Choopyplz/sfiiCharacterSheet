@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -8,6 +9,7 @@ require('dotenv').config();
 //Middlewares
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static('Public'));
 
 //connecting application with database
 mongoose.connect(process.env.DATABASE_URL, {
@@ -29,10 +31,18 @@ const Char = require('./models/Char');
 
 app.use('/chars', charsRoute);
 
-//Routes
+//Fetch All
 
-app.get('/', function (req, res) {
-    res.json();
+app.get('/fetchall', (req, res) => {
+
+    Char.find((err,val) => {
+        if(err)
+        {
+            console.log(err)
+        } else {
+            res.json(val)
+        }
+    })
 });
 
 //listening port

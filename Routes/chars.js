@@ -3,14 +3,14 @@ const router = express.Router();
 const Char = require('../models/Char');
 
 //Get back all chars
-router.get('/', async (req, res) => {
-    try{
-        const chars = await Char.find();
-        res.json(chars);
-    } catch(err) {
-        res.send({ message: err });
-    }
-});
+// router.get('/', async (req, res) => {
+//     try{
+//         const chars = await Char.find();
+//         res.json(chars);
+//     } catch(err) {
+//         res.send({ message: err });
+//     }
+// });
 
 //Submits char
 router.post('/', async (req, res) => {
@@ -33,14 +33,14 @@ router.post('/', async (req, res) => {
 });
 
 //Get back specific char
-router.get('/char/:id', async (req, res) => {
-    try{
-    const post = await Char.findById(req.params.charId);
-    res.json(Char);
-    } catch(err) {
-        res.json({ message: err });
-    }
-});
+// router.get('/char/:id', async (req, res) => {
+//     try{
+//     const post = await Char.findById(req.params.charId);
+//     res.json(Char);
+//     } catch(err) {
+//         res.json({ message: err });
+//     }
+// });
 
 //Delete a char
 router.delete('/char/:id', async (req, res) => {

@@ -62,13 +62,18 @@ header {
   border: 5px solid lightgrey;
 }
 
+.image {
+    opacity: 1;
+    display: block;
+}
+
 .psHover {
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .charIcon:hover .psHover {
-    visibility: visible;
+    opacity: 1;
 }
 
 th {
