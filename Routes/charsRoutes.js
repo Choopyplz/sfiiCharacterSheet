@@ -12,9 +12,22 @@ const Char = require('../models/Char');
 //     }
 // });
 
+const fetchChar = require('../models/Char');
+
+//Fetch Char Data
+module.exports = {
+ 
+    fetchData:function(req, res) {
+      
+      fetchChar.fetchData(function(data) {
+          res.render('char-table',{charData:data});
+      })
+    }
+};
+
 //Submits char
 router.post('/', async (req, res) => {
-    const char = new Char({
+    const charNew = new Char({
         name: req.body.name,
         date_of_birth: req.body.date_of_birth,
         height: req.body.height,
@@ -25,7 +38,7 @@ router.post('/', async (req, res) => {
         alignment: req.body.alignment
     });
     try{
-        const savedChar = await char.save();
+        const savedChar = await charNew.save();
         res.json(savedChar);
     } catch(err) {
         res.json({ message: err });

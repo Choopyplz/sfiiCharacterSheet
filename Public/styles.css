@@ -62,11 +62,6 @@ header {
   border: 5px solid lightgrey;
 }
 
-.image {
-    opacity: 1;
-    display: block;
-}
-
 .psHover {
     position: absolute;
     opacity: 0;
