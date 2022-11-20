@@ -25,7 +25,7 @@ db.once('open', () => console.log('Connected to Database'));
 app.use(express.json());
 
 //Import Routes
-const charsRoute = require('./Routes/chars');
+const charsRoute = require('./Routes/charsRoutes');
 const { response } = require('express');
 const Char = require('./models/Char');
 
@@ -33,17 +33,12 @@ app.use('/chars', charsRoute);
 
 //Fetch All
 
-app.get('/fetchall', (req, res) => {
-
-    Char.find((err,val) => {
-        if(err)
-        {
-            console.log(err)
-        } else {
-            res.json(val)
-        }
-    })
+app.get('/chars', (req, res) => {
+    Char.find({}).select({ '_id': 0, '__v': 0}).then(
+        items => res.json(items)
+    ).catch(err => console.log(err))
 });
+        
 
 //listening port
 app.listen(3000, () => console.log('Server Started'));

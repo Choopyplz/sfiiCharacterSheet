@@ -14,17 +14,6 @@ const Char = require('../models/Char');
 
 const fetchChar = require('../models/Char');
 
-//Fetch Char Data
-module.exports = {
- 
-    fetchData:function(req, res) {
-      
-      fetchChar.fetchData(function(data) {
-          res.render('char-table',{charData:data});
-      })
-    }
-};
-
 //Submits char
 router.post('/', async (req, res) => {
     const charNew = new Char({
@@ -46,14 +35,14 @@ router.post('/', async (req, res) => {
 });
 
 //Get back specific char
-// router.get('/char/:id', async (req, res) => {
-//     try{
-//     const post = await Char.findById(req.params.charId);
-//     res.json(Char);
-//     } catch(err) {
-//         res.json({ message: err });
-//     }
-// });
+router.get('/char/:id', async (req, res) => {
+    try{
+    const post = await Char.findById(req.params.charId);
+    res.json(Char);
+    } catch(err) {
+        res.json({ message: err });
+    }
+});
 
 //Delete a char
 router.delete('/char/:id', async (req, res) => {
