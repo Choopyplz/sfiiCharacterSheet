@@ -1,4 +1,4 @@
-fillTable('http://localhost:3000/chars', document.querySelector("table"));
+fillTable('http://localhost:3000/chars', document.querySelector('table'));
 
 // Bio Table
 async function fillTable(url, table) {
@@ -32,22 +32,40 @@ async function fillTable(url, table) {
     };
 };
 
+
 //Char Select Gallery
 
 const gallery = document.getElementById('gallery');
-const imageIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const playerSelectMap = document.getElementById('header');
+const iconIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-imageIndexes.forEach(i => {
-    const image = document.createElement('img');
-    image.src = `img/portraits/ps-${i}.png`;
-    image.classList.add('charIcon');
+const wMap = document.createElement('img');
+    wMap.src = 'img/wmDefault.png';
+    wMap.classList.add('worldMap');
 
-    image.addEventListener('click', () => {
-        //for table/modal
+iconIndexes.forEach(i => {
+    const icon = document.createElement('img');
+    icon.src = `img/portraits/ps-${i}.png`;
+    icon.classList.add('charIcon');
+    icon.setAttribute('id', 'psIcon' + i);
+
+    //Hover Player Select
+    icon.addEventListener('mouseover', function() {
+        icon.src = `img/portraits/psHover-${i}.png`;
+        wMap.src = `img/wm-${i}.png`;
+    })
+    icon.addEventListener('mouseout', function() {
+        icon.src = `img/portraits/ps-${i}.png`;
+        wMap.src = 'img/wmDefault.png';
     })
 
-    gallery.appendChild(image);
+    playerSelectMap.appendChild(wMap);
+    gallery.appendChild(icon);
+
 })
+
+const modal = document.getElementById('bioModal');
+
 
 
 
