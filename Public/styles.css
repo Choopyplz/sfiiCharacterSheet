@@ -70,12 +70,6 @@ header {
 
 .charIcon:hover {
     scale: 1.05;
-    
-}
-
-.psHover {
-    position: absolute;
-    opacity: 0;
 }
 
 .charIcon:hover .psHover {
@@ -88,7 +82,10 @@ header {
     justify-content: center;
     position: absolute;
     top: 20%;
+    min-width: 350px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     height: 50%;
     overflow: auto;
     background-color: white;
@@ -119,10 +116,39 @@ header {
     font-weight: bold;
 }
 
+.table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table, th, td {
+    border: 1px solid;
+}
+
 th {
-    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
 }
 
 td {
-    color: white
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(0, 0, 0)
+}
+
+.portraitContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.portrait {
+    width: 300px;
+}
+
+.bioContainer {
+    overflow: auto;
 }
