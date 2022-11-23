@@ -26,7 +26,6 @@ app.use(express.json());
 
 //Import Routes
 const charsRoute = require('./Routes/charsRoutes');
-const { response } = require('express');
 const Char = require('./models/Char');
 
 app.use('/chars', charsRoute);
@@ -41,4 +40,4 @@ app.get('/chars', (req, res) => {
         
 
 //listening port
-app.listen(3000, () => console.log('Server Started'));
+app.listen(PORT, () => console.log('Server Started'));

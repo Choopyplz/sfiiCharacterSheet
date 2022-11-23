@@ -82,6 +82,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     overflow: auto;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
     background-color: rgb(49, 82, 180);
     z-index: 2;
 }
@@ -253,11 +256,19 @@ hr {
     }
 
     .modal {
-        max-width: 800px;
+        max-width: 1000px;
     }
 
     .charIcon {
         max-width: 120px;
     }
 
+    th {
+        font-size: 13px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+    
 }

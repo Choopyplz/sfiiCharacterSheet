@@ -2,18 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Char = require('../models/Char');
 
-//Get back all chars
-// router.get('/', async (req, res) => {
-//     try{
-//         const chars = await Char.find();
-//         res.json(chars);
-//     } catch(err) {
-//         res.send({ message: err });
-//     }
-// });
-
-const fetchChar = require('../models/Char');
-
 //Submits char
 router.post('/', async (req, res) => {
     const charNew = new Char({
