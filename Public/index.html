@@ -8,20 +8,31 @@
         <img src="./img/titleScreen.png" alt="titleScreen" class="titleScreen">
     </head>
     <body>
-        <header id="header">
+        <header id="header" class="header">
         </header>
         <main>
             <div class="gallery" id="gallery"></div>
             <section class="modal hidden">
                 <div class="bioContainer">
                     <table class="table">
-                        <thead></thead>
-                        <tbody></tbody>
+                        <thead>
+                            <th>Name</th>
+                            <th>Date of Birth</th>
+                            <th>Height</th>
+                            <th>Weight</th>
+                            <th>Blood Type</th>
+                            <th>Nationality</th>
+                            <th>Fighting Style</th>
+                            <th>Alignment</th>
+                        </thead>
+                        <tbody id="bioKeys">
+                        </tbody>
                     </table>
                 </div>
                 <div class="portrait">
                     <img class="plPortrait" src="img/portraits/largerPortraits/pl-12.png" alt="portrait">
                 </div>
+                <button id="exit"  class="exit">Close</button>
             </section>
             <div class="overlay hidden"></div>
         </main>
